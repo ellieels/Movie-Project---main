@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Favorite Movies</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/297392fead.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <%- include('partials/navBar') %> 
+ 
+  <div class="container">
+    
+     <div class="favorite-text">
+      <p class="favorite-title">Favorite Movies</p>
+      <p class="favorite-subtitle"><i class="fa-solid fa-star"></i>    Movies you've rated 5 stars!   <i class="fa-solid fa-star"></i></p>
+      </div>
+    <div class="all-container">
+        
+      <div class="favorite-movies">
+    <% favoriteMovies.forEach(movie => { %>
+      
+      <div class="movie-container">
+        <img id="movie-poster" src="<%= movie.poster %>" alt="Movie Poster" class="your-movie"><br>
+        <p class="movie-title"><%= movie.title %>
+      </div>
+      
+      <% }); %>
+      </div>
+      
+    </div>
+    
+
+
+    
+  </div>  
+</body>
+</html>

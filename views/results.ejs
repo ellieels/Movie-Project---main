@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Database</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/297392fead.js" crossorigin="anonymous"></script>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save Movie</title>
+</head>
+<body>
+ <%- include('partials/navBar') %>
+ <div class="results">
+ 
+  <div class="results-container">
+   <img src="<%= movie.Poster %>" alt="Movie Poster" class="results-poster"><br />
+   <div class="movie-info">
+    <%= movie.Title %><br />
+    <%= movie.Year %><br />
+    <%= movie.Plot %><br />
+  
+    <br /><br />
+
+    <form action="/save" method="POST">
+      <input class="movie-title" type="hidden" name="title" value="<%= movie.Title %>" />
+      <input type="hidden" name="poster" value="<%= movie.Poster %>" />
+      <input type="hidden" name="director" value="<%= movie.Director %>" />
+      <input type="hidden" name="year" value="<%= movie.Year %>" />
+      <input type="hidden" name="boxOffice" value="<%= movie.BoxOffice %>" />
+      
+      <button type="submit" class="submit-button"><i class="fa-solid fa-plus"></i></button>
+    </form>
+
+    <a href="/" class="movie-button">Search Again</a>
+    </div>
+  </div>
+  </div>
+</body>
+</html>

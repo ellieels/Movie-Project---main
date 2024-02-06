@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Database</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/297392fead.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <%- include('partials/navBar') %> 
+ 
+  <div class="container">
+   <div class="spacer"></div>
+    <form action="/search" method="POST">
+      <input type="text" name="movieTitle" class="search-box" placeholder="Search for a movie..."><br>
+      <button type="submit" class="submit-button">SEARCH</button>
+      <div class="spacer"></div>
+    </form>
+    
+  <div class="all-container">
+    <% if (flashMessages.update) { %>
+      <p class="flash-message"><%= flashMessages.update %></p>
+    <% } %>
+    <h2>Saved Movies</h2>
+    <h3>You've watch <%= totalMovies %> movies a total of <%= totalTimesWatched %> times!</h3> 
+    <ul>
+    <div class="flex">
+      <form action="/sort" method="POST">
+        <button type="submit" class="button-sort">SORT BY WATCHED</button>
+      </form>
+
+      <form action="/sortrating" method="POST">
+        <button type="submit" class="button-sort">SORT BY RATING</button>
+      </form>
+    </div>
+    
+    <div class="your-movies">
+    <% savedMovies.forEach(movie => { %>
+      
+       <div class="movie-container">
+        <img id="movie-poster" src="<%= movie.poster %>" alt="Movie Poster" class="your-movie"><br>
+        <p class="movie-title"><%= movie.title %></p>
+        Rated: <%= movie.rating %><br>
+        Watched: <%= movie.timesWatched %><br>
+        <a href="watch/<%= movie._id %>" class="movie-button">Watch</a>
+        <a href="rate/<%= movie._id %>/up" class="movie-button"><i class="fa-solid fa-star"></i></a>
+        <a href="rate/<%= movie._id %>/down" class="movie-button"><i class="fa-regular fa-star"></i></a>
+        <a href="delete/<%= movie._id %>" class="movie-button">Delete</a>
+        
+        </div>
+      
+    <% }); %>
+    </div>
+    </ul>
+  </div>
+    
+  </div>  
+</body>
+</html>

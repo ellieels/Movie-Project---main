@@ -1,0 +1,199 @@
+@font-face {
+  font-family: Gilgan;
+  src: url('Gilgan.otf');
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Gilgan;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.spacer {
+  height: 80px;
+}
+
+/* HOME PAGE */ 
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1611021809244-83074a8a42c1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.search-box{
+  height: 50px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.submit-button{
+  margin: 10px;
+  border-radius: 15px;
+  width: 6vw;
+  height: 2vw;
+}
+
+.button-sort{
+  margin-right: 35px;
+  margin-top: 5px;
+  border-radius: 15px;
+  width: 13vw;
+  height: 2vw;
+}
+
+.flex{
+  justify-content: center;
+  display: flex;
+}
+
+
+.all-container {
+  padding-top: 30px;
+  background-color: dimgray;
+  width: 100vw;
+}
+
+.flash-message{
+  color: white; 
+}
+
+h2{
+  font-size: 4.5vw;
+  color: white;
+}
+
+h3{
+  font-size: 1.3vw;
+  color: white;
+}
+
+.your-movies{
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie-container{
+  text-align: center;
+  width: 19.5vw;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  background-color: lightgray;
+}
+
+.your-movie{
+  height: 20vw;
+}
+
+.movie-button{
+  margin: 5px;
+  width: 10px;
+  height: 5px;
+  color: dimgray;
+}
+
+
+/* RESULTS PAGE */
+
+.results{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-container{
+  display: flex;
+  width: 60vw;
+  margin: 50px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px black;
+  background-color: lightgray;
+}
+
+img {
+  margin: auto;
+}
+
+.movie-info{
+  width: 30vw;
+  margin: auto;
+  text-align: center;
+}
+
+.movie-title{
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+
+
+.results-poster {
+  height: 30vw;
+}
+
+
+/* FAVORITES */
+
+.favorite-button{
+  border: none;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.favorite-text{
+  margin: 30px;
+  padding: 20px 50px 20px 50px; 
+  border-radius: 20px;
+  background-color: rgba(88, 88, 88, 0.5); 
+}
+
+.favorite-title{ 
+  font-size: 4.5vw;
+  color: white;
+}
+
+.favorite-subtitle{
+  font-size: 1.7vw;
+  color: white;
+}
+
+.favorite-movies{
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.movie-container{
+  text-align: center;
+  width: 19.5vw;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  background-color: lightgray;
+}
+
+.your-movie{
+  height: 20vw;
+}
+
